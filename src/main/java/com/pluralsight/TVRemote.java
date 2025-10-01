@@ -5,13 +5,17 @@ public class TVRemote {
     private int channelNumber, currentVolume;
     private boolean powerState;
 
+    public TVRemote(String tvManufacturer) {
+        this.tvManufacturer = tvManufacturer;
+        this.channelNumber = 0;
+        this.currentVolume = 10;
+        this.powerState = false;
+    }
+
     public String getStatus() {
-        String powerStatus = "";
+        String powerStatus = "OFF";
         if (this.isPowerState()) {
-            powerStatus = "On";
-        }
-        else {
-            powerStatus = "Off";
+            powerStatus = "ON";
         }
         return "Status: " + powerStatus +", Channel: " + getChannelNumber() + " ,(" + getChannelName()+ ") Volume: " + getCurrentVolume();
     }
@@ -69,5 +73,19 @@ public class TVRemote {
         }
     }
 
+    public void setChannelNumber(int channelNumber) {
+        this.channelNumber = channelNumber;
+    }
 
+    public void setTvManufacturer(String tvManufacturer) {
+        this.tvManufacturer = tvManufacturer;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
+    public void setPowerState(boolean powerState) {
+        this.powerState = powerState;
+    }
 }
