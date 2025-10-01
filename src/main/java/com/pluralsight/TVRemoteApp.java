@@ -7,7 +7,10 @@ public class TVRemoteApp {
         Scanner keyboard = new Scanner(System.in);
 
         TVRemote lgTV = new TVRemote("LG");
+        lgTV.getCurrentVolume(10);
+        lvTV.getCurrentChannel();
 
+        System.out.println(lgTV.getStatus());
 
     }
 }

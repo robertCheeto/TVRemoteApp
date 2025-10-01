@@ -37,15 +37,17 @@ public class TVRemote {
     }
 
     public void turnOn() {
+        this.powerState = true;
 
     }
 
     public void turnOff() {
+        this.powerState = false;
 
     }
 
     public void changeChannel(int channel) {
-        this.channel = channel;
+        this.channelNumber = channel;
     }
 
     public void adjustVolume(int volume) {
@@ -53,23 +55,18 @@ public class TVRemote {
     }
 
     public String getChannelName() {
-        if (channelNumber == 3) {
-            return "Cartoon Network";
-        }
-        else if (channelNumber == 5) {
-            return "Discovery Channel";
-        }
-        else if (channelNumber == 8) {
-            return "Food Channel";
-        }
-        else if (channelNumber == 13) {
-            return "HGTV";
-        }
-        else if (channelNumber == 25) {
-            return "Comedy Central";
-        }
-        else {
-            return "Unknown Channel";
+        switch(this.channelNumber) {
+            case 3:
+                return "Cartoon Network";
+            case 5:
+                return "Discovery Channel";
+            case 8:
+                return "Food Channel";
+            case 13:
+                return "HGTV";
+            case 25:
+                return "Comedy Central";
+            default: return "Unknown Channel";
         }
     }
 
