@@ -17,7 +17,7 @@ public class TVRemote {
         if (this.isPowerState()) {
             powerStatus = "ON";
         }
-        return "Status: " + powerStatus +", Channel: " + getChannelNumber() + " ,(" + getChannelName()+ ") Volume: " + getCurrentVolume();
+        return "Status: " + powerStatus +", Channel: " + getChannelNumber() + ", (" + getChannelName()+ ") Volume: " + getCurrentVolume();
     }
 
     public int getChannelNumber() {
@@ -38,12 +38,10 @@ public class TVRemote {
 
     public void turnOn() {
         this.powerState = true;
-
     }
 
     public void turnOff() {
         this.powerState = false;
-
     }
 
     public void changeChannel(int channel) {

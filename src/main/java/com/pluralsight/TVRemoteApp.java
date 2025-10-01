@@ -7,8 +7,9 @@ public class TVRemoteApp {
         Scanner keyboard = new Scanner(System.in);
 
         TVRemote lgTV = new TVRemote("LG");
-        lgTV.getCurrentVolume(10);
-        lvTV.getCurrentChannel();
+        lgTV.setPowerState(true);
+        lgTV.setCurrentVolume(50);
+        lgTV.setChannelNumber(4);
 
         System.out.println(lgTV.getStatus());
 
