@@ -49,7 +49,7 @@ public class TVRemote {
     }
 
     public void adjustVolume(int volume) {
-
+        this.currentVolume = volume;
     }
 
     public String getChannelName() {
